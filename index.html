@@ -16,7 +16,6 @@
 
 <body>
 
-    <!-- خلفية متحركة -->
     <div class="background-animation">
         <span class="shape shape-1">📚</span>
         <span class="shape shape-2">✏️</span>
@@ -26,20 +25,13 @@
         <span class="shape shape-6">📖</span>
     </div>
 
-    <!-- =========================
-         الصفحة الرئيسية
-    ========================== -->
     <section id="landingPage" class="page landing-page">
 
         <div class="landing-card">
 
-            <div class="education-logo">
-                🎓
-            </div>
+            <div class="education-logo">🎓</div>
 
-            <div class="badge">
-                منصة تعليمية
-            </div>
+            <div class="badge">منصة تعليمية</div>
 
             <h1>محمود بكالوريا</h1>
 
@@ -67,9 +59,7 @@
     </section>
 
 
-    <!-- =========================
-         صفحة تسجيل الدخول
-    ========================== -->
+    <!-- صفحة تسجيل الدخول -->
     <section id="authPage" class="page auth-page hidden">
 
         <div class="auth-card">
@@ -99,9 +89,7 @@
                 <p>سجل دخولك للدخول إلى المنصة.</p>
 
                 <div class="input-group">
-                    <label for="loginEmail">
-                        البريد الإلكتروني
-                    </label>
+                    <label for="loginEmail">البريد الإلكتروني</label>
 
                     <input
                         id="loginEmail"
@@ -113,9 +101,7 @@
                 </div>
 
                 <div class="input-group">
-                    <label for="loginPassword">
-                        كلمة المرور
-                    </label>
+                    <label for="loginPassword">كلمة المرور</label>
 
                     <input
                         id="loginPassword"
@@ -138,6 +124,49 @@
                     تسجيل الدخول
                 </button>
 
+
+                <!-- تسجيل الدخول بطرق أخرى -->
+                <div class="social-login">
+
+                    <div class="social-divider">
+                        <span>أو سجل الدخول باستخدام</span>
+                    </div>
+
+                    <button
+                        type="button"
+                        id="googleLoginButton"
+                        class="social-login-button google-login-button"
+                    >
+                        <img
+                            src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"
+                            alt="Google"
+                        >
+                        <span>المتابعة باستخدام Google</span>
+                    </button>
+
+                    <button
+                        type="button"
+                        id="facebookLoginButton"
+                        class="social-login-button facebook-login-button"
+                    >
+                        <img
+                            src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/facebook.svg"
+                            alt="Facebook"
+                        >
+                        <span>المتابعة باستخدام Facebook</span>
+                    </button>
+
+                    <button
+                        type="button"
+                        id="appleLoginButton"
+                        class="social-login-button apple-login-button"
+                    >
+                        <span class="apple-logo"></span>
+                        <span>المتابعة باستخدام Apple</span>
+                    </button>
+
+                </div>
+
             </form>
 
 
@@ -149,9 +178,7 @@
                 <p>انضم إلى محمود بكالوريا وابدأ رحلتك.</p>
 
                 <div class="input-group">
-                    <label for="registerName">
-                        الاسم الكامل
-                    </label>
+                    <label for="registerName">الاسم الكامل</label>
 
                     <input
                         id="registerName"
@@ -163,9 +190,7 @@
                 </div>
 
                 <div class="input-group">
-                    <label for="registerEmail">
-                        البريد الإلكتروني
-                    </label>
+                    <label for="registerEmail">البريد الإلكتروني</label>
 
                     <input
                         id="registerEmail"
@@ -177,9 +202,7 @@
                 </div>
 
                 <div class="input-group">
-                    <label for="registerPassword">
-                        كلمة المرور
-                    </label>
+                    <label for="registerPassword">كلمة المرور</label>
 
                     <input
                         id="registerPassword"
@@ -192,9 +215,7 @@
                 </div>
 
                 <div class="input-group">
-                    <label for="registerConfirm">
-                        تأكيد كلمة المرور
-                    </label>
+                    <label for="registerConfirm">تأكيد كلمة المرور</label>
 
                     <input
                         id="registerConfirm"
@@ -217,12 +238,9 @@
     </section>
 
 
-    <!-- =========================
-         المنصة
-    ========================== -->
+    <!-- المنصة -->
     <section id="platformPage" class="page platform-page hidden">
 
-        <!-- الشريط العلوي -->
         <header class="navbar">
 
             <div class="brand">
@@ -252,12 +270,9 @@
         </header>
 
 
-        <!-- القائمة الجانبية -->
         <aside id="sideMenu" class="side-menu">
 
-            <button id="closeMenu" class="close-menu">
-                ×
-            </button>
+            <button id="closeMenu" class="close-menu">×</button>
 
             <h2>القائمة</h2>
 
@@ -272,23 +287,18 @@
         </aside>
 
 
-        <!-- محتوى المنصة -->
         <main class="platform-content">
 
             <div class="welcome-box">
 
-                <div class="welcome-icon">
-                    ✨
-                </div>
+                <div class="welcome-icon">✨</div>
 
                 <div>
                     <h2 id="welcomeMessage">
                         أخيراً رجعت يا صديقي ❤️
                     </h2>
 
-                    <p>
-                        جاهز نبدأ رحلة التفوق؟
-                    </p>
+                    <p>جاهز نبدأ رحلة التفوق؟</p>
                 </div>
 
             </div>
@@ -300,73 +310,37 @@
 
                     <span>📘 المسار الدراسي</span>
 
-                    <h1>
-                        الهندسة وعلوم الحاسب
-                    </h1>
+                    <h1>الهندسة وعلوم الحاسب</h1>
 
-                    <p>
-                        اختر المادة التي تريد مذاكرتها.
-                    </p>
+                    <p>اختر المادة التي تريد مذاكرتها.</p>
 
                 </div>
 
 
-                <!-- المواد -->
                 <div class="subjects-grid">
 
-                    <article
-                        class="subject-card"
-                        data-subject="arabic"
-                    >
+                    <article class="subject-card" data-subject="arabic">
                         <div class="subject-icon">📚</div>
-
                         <h2>اللغة العربية</h2>
-
-                        <p>
-                            شرح • ملزمات • اختبارات
-                        </p>
+                        <p>شرح • ملزمات • اختبارات</p>
                     </article>
 
-
-                    <article
-                        class="subject-card"
-                        data-subject="english"
-                    >
+                    <article class="subject-card" data-subject="english">
                         <div class="subject-icon">🇬🇧</div>
-
                         <h2>اللغة الإنجليزية</h2>
-
-                        <p>
-                            شرح • ملزمات • اختبارات
-                        </p>
+                        <p>شرح • ملزمات • اختبارات</p>
                     </article>
 
-
-                    <article
-                        class="subject-card"
-                        data-subject="history"
-                    >
+                    <article class="subject-card" data-subject="history">
                         <div class="subject-icon">🏛️</div>
-
                         <h2>التاريخ</h2>
-
-                        <p>
-                            شرح • ملزمات • اختبارات
-                        </p>
+                        <p>شرح • ملزمات • اختبارات</p>
                     </article>
 
-
-                    <article
-                        class="subject-card"
-                        data-subject="programming"
-                    >
+                    <article class="subject-card" data-subject="programming">
                         <div class="subject-icon">💻</div>
-
                         <h2>البرمجة</h2>
-
-                        <p>
-                            شرح • ملزمات • اختبارات
-                        </p>
+                        <p>شرح • ملزمات • اختبارات</p>
                     </article>
 
                 </div>
@@ -374,23 +348,13 @@
             </section>
 
 
-            <!-- محتوى المادة -->
-            <section
-                id="subjectSection"
-                class="subject-section hidden"
-            >
+            <section id="subjectSection" class="subject-section hidden">
 
-                <button
-                    id="backToSubjects"
-                    class="back-button"
-                >
+                <button id="backToSubjects" class="back-button">
                     → العودة للمواد
                 </button>
 
-                <h2 id="subjectTitle">
-                    المادة
-                </h2>
-
+                <h2 id="subjectTitle">المادة</h2>
 
                 <div class="content-tabs">
 
@@ -417,23 +381,16 @@
 
                 </div>
 
-
-                <div id="contentList" class="content-list">
-                </div>
+                <div id="contentList" class="content-list"></div>
 
             </section>
 
 
-            <!-- التواصل -->
             <section class="social-section">
 
-                <h2>
-                    تابعنا على وسائل التواصل 📱
-                </h2>
+                <h2>تابعنا على وسائل التواصل 📱</h2>
 
-                <p>
-                    تابع كل جديد في محمود بكالوريا.
-                </p>
+                <p>تابع كل جديد في محمود بكالوريا.</p>
 
                 <div class="social-buttons">
 
@@ -464,17 +421,11 @@
     </section>
 
 
-    <!-- =========================
-         نافذة بيانات الطالب
-    ========================== -->
     <div id="studentModal" class="modal hidden">
 
         <div class="modal-card">
 
-            <button
-                id="closeStudentModal"
-                class="modal-close"
-            >
+            <button id="closeStudentModal" class="modal-close">
                 ×
             </button>
 
@@ -487,7 +438,6 @@
     </div>
 
 
-    <!-- الرسائل -->
     <div id="toast" class="toast"></div>
 
 
