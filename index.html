@@ -3,142 +3,495 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مكتبة محمود باك</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f4f7fb;
-            color: #222;
-        }
+    <title>محمود بكالوريا | Mahmoud Baccalaureate</title>
 
-        header {
-            background: #0757a0;
-            color: white;
-            text-align: center;
-            padding: 30px 15px;
-        }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-        header h1 {
-            margin: 0;
-            font-size: 32px;
-        }
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
 
-        header p {
-            font-size: 18px;
-            margin-top: 10px;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 30px auto;
-            padding: 15px;
-        }
-
-        .branch {
-            background: white;
-            border-radius: 18px;
-            padding: 25px;
-            margin-bottom: 25px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-        }
-
-        .branch h2 {
-            color: #0757a0;
-            margin-top: 0;
-        }
-
-        .lesson {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 15px;
-            padding: 15px;
-            margin-top: 12px;
-            background: #f1f5f9;
-            border-radius: 12px;
-        }
-
-        .lesson span {
-            font-weight: bold;
-        }
-
-        .watch {
-            background: #0757a0;
-            color: white;
-            text-decoration: none;
-            padding: 10px 18px;
-            border-radius: 10px;
-            font-weight: bold;
-        }
-
-        .watch:hover {
-            background: #063f75;
-        }
-
-        footer {
-            text-align: center;
-            padding: 25px;
-            color: #666;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-    <h1>📚 مكتبة محمود باك</h1>
-    <p>منصتك التعليمية لرحلة تعلم أفضل 🚀</p>
-</header>
-
-<div class="container">
-
-    <!-- فرع البرمجة -->
-    <div class="branch">
-        <h2>💻 فرع البرمجة</h2>
-
-        <div class="lesson">
-            <span>🎥 الدرس الأول</span>
-
-            <a class="watch"
-               href="https://youtu.be/pqwRmKuYc58?si=2V02YLp0vkAcs1Qz"
-               target="_blank">
-                ▶️ مشاهدة الشرح
-            </a>
-        </div>
+    <!-- خلفية متحركة -->
+    <div class="background-animation">
+        <span class="shape shape-1">📚</span>
+        <span class="shape shape-2">✏️</span>
+        <span class="shape shape-3">💻</span>
+        <span class="shape shape-4">🎓</span>
+        <span class="shape shape-5">✦</span>
+        <span class="shape shape-6">📖</span>
     </div>
 
-    <!-- فرع العربي -->
-    <div class="branch">
-        <h2>📚 فرع العربي</h2>
+    <!-- =========================
+         الصفحة الرئيسية
+    ========================== -->
+    <section id="landingPage" class="page landing-page">
 
-        <div class="lesson">
-            <span>🎥 الدرس الأول</span>
+        <div class="landing-card">
 
-            <a class="watch"
-               href="https://youtu.be/1l6-MzGJ5DA?si=5A00OGEZCvavP25b"
-               target="_blank">
-                ▶️ مشاهدة الشرح
-            </a>
+            <div class="education-logo">
+                🎓
+            </div>
+
+            <div class="badge">
+                منصة تعليمية
+            </div>
+
+            <h1>محمود بكالوريا</h1>
+
+            <h2>Mahmoud Baccalaureate</h2>
+
+            <p>
+                أهلاً بك يا صديقي العزيز ❤️
+                <br>
+                ابدأ معنا رحلة التعلم والتفوق.
+            </p>
+
+            <button id="startButton" class="primary-button">
+                اتفضل يا باشا
+                <span>←</span>
+            </button>
+
+            <div class="quick-features">
+                <span>📚 شرح</span>
+                <span>🎥 فيديوهات</span>
+                <span>📝 اختبارات</span>
+            </div>
+
         </div>
 
-        <div class="lesson">
-            <span>🎥 الدرس الثاني</span>
+    </section>
 
-            <a class="watch"
-               href="https://youtu.be/xpndcdEmJVs?si=N0bwX51lXqCec4l9"
-               target="_blank">
-                ▶️ مشاهدة الشرح
-            </a>
+
+    <!-- =========================
+         صفحة تسجيل الدخول
+    ========================== -->
+    <section id="authPage" class="page auth-page hidden">
+
+        <div class="auth-card">
+
+            <button id="backToLanding" class="back-button">
+                → العودة للرئيسية
+            </button>
+
+            <div class="auth-tabs">
+
+                <button id="loginTab" class="auth-tab active">
+                    تسجيل الدخول
+                </button>
+
+                <button id="registerTab" class="auth-tab">
+                    إنشاء حساب
+                </button>
+
+            </div>
+
+
+            <!-- تسجيل الدخول -->
+            <form id="loginForm" class="auth-form">
+
+                <h2>أهلاً بعودتك 👋</h2>
+
+                <p>سجل دخولك للدخول إلى المنصة.</p>
+
+                <div class="input-group">
+                    <label for="loginEmail">
+                        البريد الإلكتروني
+                    </label>
+
+                    <input
+                        id="loginEmail"
+                        type="email"
+                        placeholder="example@email.com"
+                        autocomplete="email"
+                        required
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label for="loginPassword">
+                        كلمة المرور
+                    </label>
+
+                    <input
+                        id="loginPassword"
+                        type="password"
+                        placeholder="••••••••"
+                        autocomplete="current-password"
+                        required
+                    >
+                </div>
+
+                <button
+                    type="button"
+                    id="forgotPassword"
+                    class="forgot-button"
+                >
+                    نسيت كلمة المرور؟
+                </button>
+
+                <button type="submit" class="primary-button full-button">
+                    تسجيل الدخول
+                </button>
+
+            </form>
+
+
+            <!-- إنشاء حساب -->
+            <form id="registerForm" class="auth-form hidden">
+
+                <h2>أنشئ حسابك 🚀</h2>
+
+                <p>انضم إلى محمود بكالوريا وابدأ رحلتك.</p>
+
+                <div class="input-group">
+                    <label for="registerName">
+                        الاسم الكامل
+                    </label>
+
+                    <input
+                        id="registerName"
+                        type="text"
+                        placeholder="اكتب اسمك الكامل"
+                        autocomplete="name"
+                        required
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label for="registerEmail">
+                        البريد الإلكتروني
+                    </label>
+
+                    <input
+                        id="registerEmail"
+                        type="email"
+                        placeholder="example@email.com"
+                        autocomplete="email"
+                        required
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label for="registerPassword">
+                        كلمة المرور
+                    </label>
+
+                    <input
+                        id="registerPassword"
+                        type="password"
+                        placeholder="6 أحرف على الأقل"
+                        minlength="6"
+                        autocomplete="new-password"
+                        required
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label for="registerConfirm">
+                        تأكيد كلمة المرور
+                    </label>
+
+                    <input
+                        id="registerConfirm"
+                        type="password"
+                        placeholder="أعد كتابة كلمة المرور"
+                        minlength="6"
+                        autocomplete="new-password"
+                        required
+                    >
+                </div>
+
+                <button type="submit" class="primary-button full-button">
+                    إنشاء الحساب
+                </button>
+
+            </form>
+
         </div>
+
+    </section>
+
+
+    <!-- =========================
+         المنصة
+    ========================== -->
+    <section id="platformPage" class="page platform-page hidden">
+
+        <!-- الشريط العلوي -->
+        <header class="navbar">
+
+            <div class="brand">
+                Mahmoud Baccalaureate
+            </div>
+
+            <div class="navbar-actions">
+
+                <button
+                    id="themeButton"
+                    class="nav-button"
+                    title="الوضع الليلي"
+                >
+                    🌙
+                </button>
+
+                <button
+                    id="menuButton"
+                    class="nav-button"
+                    title="القائمة"
+                >
+                    ☰
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- القائمة الجانبية -->
+        <aside id="sideMenu" class="side-menu">
+
+            <button id="closeMenu" class="close-menu">
+                ×
+            </button>
+
+            <h2>القائمة</h2>
+
+            <button id="studentDataButton" class="side-option">
+                👤 بيانات الطالب
+            </button>
+
+            <button id="logoutButton" class="side-option">
+                🚪 تسجيل الخروج
+            </button>
+
+        </aside>
+
+
+        <!-- محتوى المنصة -->
+        <main class="platform-content">
+
+            <div class="welcome-box">
+
+                <div class="welcome-icon">
+                    ✨
+                </div>
+
+                <div>
+                    <h2 id="welcomeMessage">
+                        أخيراً رجعت يا صديقي ❤️
+                    </h2>
+
+                    <p>
+                        جاهز نبدأ رحلة التفوق؟
+                    </p>
+                </div>
+
+            </div>
+
+
+            <section class="track-section">
+
+                <div class="section-heading">
+
+                    <span>📘 المسار الدراسي</span>
+
+                    <h1>
+                        الهندسة وعلوم الحاسب
+                    </h1>
+
+                    <p>
+                        اختر المادة التي تريد مذاكرتها.
+                    </p>
+
+                </div>
+
+
+                <!-- المواد -->
+                <div class="subjects-grid">
+
+                    <article
+                        class="subject-card"
+                        data-subject="arabic"
+                    >
+                        <div class="subject-icon">📚</div>
+
+                        <h2>اللغة العربية</h2>
+
+                        <p>
+                            شرح • ملزمات • اختبارات
+                        </p>
+                    </article>
+
+
+                    <article
+                        class="subject-card"
+                        data-subject="english"
+                    >
+                        <div class="subject-icon">🇬🇧</div>
+
+                        <h2>اللغة الإنجليزية</h2>
+
+                        <p>
+                            شرح • ملزمات • اختبارات
+                        </p>
+                    </article>
+
+
+                    <article
+                        class="subject-card"
+                        data-subject="history"
+                    >
+                        <div class="subject-icon">🏛️</div>
+
+                        <h2>التاريخ</h2>
+
+                        <p>
+                            شرح • ملزمات • اختبارات
+                        </p>
+                    </article>
+
+
+                    <article
+                        class="subject-card"
+                        data-subject="programming"
+                    >
+                        <div class="subject-icon">💻</div>
+
+                        <h2>البرمجة</h2>
+
+                        <p>
+                            شرح • ملزمات • اختبارات
+                        </p>
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- محتوى المادة -->
+            <section
+                id="subjectSection"
+                class="subject-section hidden"
+            >
+
+                <button
+                    id="backToSubjects"
+                    class="back-button"
+                >
+                    → العودة للمواد
+                </button>
+
+                <h2 id="subjectTitle">
+                    المادة
+                </h2>
+
+
+                <div class="content-tabs">
+
+                    <button
+                        class="content-tab active"
+                        data-type="videos"
+                    >
+                        🎥 فيديوهات الشرح
+                    </button>
+
+                    <button
+                        class="content-tab"
+                        data-type="files"
+                    >
+                        📄 ملزمات الشرح
+                    </button>
+
+                    <button
+                        class="content-tab"
+                        data-type="tests"
+                    >
+                        📝 الاختبارات
+                    </button>
+
+                </div>
+
+
+                <div id="contentList" class="content-list">
+                </div>
+
+            </section>
+
+
+            <!-- التواصل -->
+            <section class="social-section">
+
+                <h2>
+                    تابعنا على وسائل التواصل 📱
+                </h2>
+
+                <p>
+                    تابع كل جديد في محمود بكالوريا.
+                </p>
+
+                <div class="social-buttons">
+
+                    <a
+                        href="https://www.tiktok.com/@mahmoud_bac"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <span>🎵</span>
+                        TikTok
+                    </a>
+
+                    <a
+                        href="https://whatsapp.com/channel/0029Vb8KXIF9WtByx5SHAL2B"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <span>💬</span>
+                        WhatsApp
+                    </a>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </section>
+
+
+    <!-- =========================
+         نافذة بيانات الطالب
+    ========================== -->
+    <div id="studentModal" class="modal hidden">
+
+        <div class="modal-card">
+
+            <button
+                id="closeStudentModal"
+                class="modal-close"
+            >
+                ×
+            </button>
+
+            <h2>بيانات الطالب 👤</h2>
+
+            <div id="studentInfo"></div>
+
+        </div>
+
     </div>
 
-</div>
 
-<footer>
-    © 2026 مكتبة محمود باك
-</footer>
+    <!-- الرسائل -->
+    <div id="toast" class="toast"></div>
+
+
+    <script src="script.js"></script>
 
 </body>
 </html>
