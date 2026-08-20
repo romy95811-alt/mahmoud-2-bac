@@ -15,72 +15,37 @@ document.addEventListener("DOMContentLoaded", function () {
        الصفحات
     ========================== */
 
-    const landingPage =
-        $("#landingPage");
-
-    const authPage =
-        $("#authPage");
-
-    const platformPage =
-        $("#platformPage");
+    const landingPage = $("#landingPage");
+    const authPage = $("#authPage");
+    const platformPage = $("#platformPage");
 
 
     /* =========================
        عناصر تسجيل الدخول
     ========================== */
 
-    const startButton =
-        $("#startButton");
-
-    const backToLanding =
-        $("#backToLanding");
-
-    const loginTab =
-        $("#loginTab");
-
-    const registerTab =
-        $("#registerTab");
-
-    const loginForm =
-        $("#loginForm");
-
-    const registerForm =
-        $("#registerForm");
+    const startButton = $("#startButton");
+    const backToLanding = $("#backToLanding");
+    const loginTab = $("#loginTab");
+    const registerTab = $("#registerTab");
+    const loginForm = $("#loginForm");
+    const registerForm = $("#registerForm");
 
 
     /* =========================
        عناصر المنصة
     ========================== */
 
-    const sideMenu =
-        $("#sideMenu");
-
-    const menuButton =
-        $("#menuButton");
-
-    const closeMenu =
-        $("#closeMenu");
-
-    const themeButton =
-        $("#themeButton");
-
-    const logoutButton =
-        $("#logoutButton");
-
-    const studentDataButton =
-        $("#studentDataButton");
-
-    const subjectSection =
-        $("#subjectSection");
-
-    const subjectTitle =
-        $("#subjectTitle");
-
-    const contentList =
-        $("#contentList");
-
-    const backToSubjects =
-        $("#backToSubjects");
+    const sideMenu = $("#sideMenu");
+    const menuButton = $("#menuButton");
+    const closeMenu = $("#closeMenu");
+    const themeButton = $("#themeButton");
+    const logoutButton = $("#logoutButton");
+    const studentDataButton = $("#studentDataButton");
+    const subjectSection = $("#subjectSection");
+    const subjectTitle = $("#subjectTitle");
+    const contentList = $("#contentList");
+    const backToSubjects = $("#backToSubjects");
 
 
     /* =========================
@@ -89,13 +54,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const subjects = {
 
+        /* =========================
+           اللغة العربية
+        ========================== */
+
         arabic: {
             name: "📚 اللغة العربية",
 
             videos: [
-                "شرح الدرس الأول",
-                "شرح الدرس الثاني",
-                "المراجعة الشاملة"
+                {
+                    title: "شرح الدرس الأول",
+                    url: "https://youtu.be/1l6-MzGJ5DA?si=5A00OGEZCvavP25b"
+                },
+                {
+                    title: "شرح الدرس الثاني",
+                    url: "https://youtu.be/xpndcdEmJVs?si=N0bwX51lXqCec4l9"
+                },
+                {
+                    title: "المراجعة الشاملة",
+                    url: ""
+                }
             ],
 
             files: [
@@ -110,13 +88,26 @@ document.addEventListener("DOMContentLoaded", function () {
         },
 
 
+        /* =========================
+           اللغة الإنجليزية
+        ========================== */
+
         english: {
             name: "🇬🇧 اللغة الإنجليزية",
 
             videos: [
-                "شرح Unit 1",
-                "شرح Unit 2",
-                "مراجعة اللغة الإنجليزية"
+                {
+                    title: "شرح Unit 1",
+                    url: ""
+                },
+                {
+                    title: "شرح Unit 2",
+                    url: ""
+                },
+                {
+                    title: "مراجعة اللغة الإنجليزية",
+                    url: ""
+                }
             ],
 
             files: [
@@ -131,13 +122,26 @@ document.addEventListener("DOMContentLoaded", function () {
         },
 
 
+        /* =========================
+           التاريخ
+        ========================== */
+
         history: {
             name: "🏛️ التاريخ",
 
             videos: [
-                "شرح الدرس الأول",
-                "شرح الدرس الثاني",
-                "مراجعة التاريخ"
+                {
+                    title: "شرح الدرس الأول",
+                    url: ""
+                },
+                {
+                    title: "شرح الدرس الثاني",
+                    url: ""
+                },
+                {
+                    title: "مراجعة التاريخ",
+                    url: ""
+                }
             ],
 
             files: [
@@ -152,13 +156,26 @@ document.addEventListener("DOMContentLoaded", function () {
         },
 
 
+        /* =========================
+           البرمجة
+        ========================== */
+
         programming: {
             name: "💻 البرمجة",
 
             videos: [
-                "مقدمة في البرمجة",
-                "شرح أساسيات البرمجة",
-                "تطبيق عملي"
+                {
+                    title: "الدرس الأول",
+                    url: "https://youtu.be/pqwRmKuYc58?si=2V02YLp0vkAcs1Qz"
+                },
+                {
+                    title: "شرح أساسيات البرمجة",
+                    url: ""
+                },
+                {
+                    title: "تطبيق عملي",
+                    url: ""
+                }
             ],
 
             files: [
@@ -182,9 +199,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function showPage(page) {
 
         landingPage.classList.add("hidden");
-
         authPage.classList.add("hidden");
-
         platformPage.classList.add("hidden");
 
         page.classList.remove("hidden");
@@ -204,20 +219,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function showToast(message) {
 
-        const toast =
-            $("#toast");
+        const toast = $("#toast");
 
-        toast.textContent =
-            message;
+        toast.textContent = message;
 
         toast.classList.add("show");
 
         clearTimeout(toastTimer);
 
         toastTimer = setTimeout(() => {
-
             toast.classList.remove("show");
-
         }, 3000);
     }
 
@@ -304,12 +315,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
             event.preventDefault();
 
-
             const name =
                 $("#registerName")
                 .value
                 .trim();
-
 
             const email =
                 $("#registerEmail")
@@ -317,11 +326,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 .trim()
                 .toLowerCase();
 
-
             const password =
                 $("#registerPassword")
                 .value;
-
 
             const confirmPassword =
                 $("#registerConfirm")
@@ -384,13 +391,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
             const user = {
-
                 name: name,
-
                 email: email,
-
                 password: password
-
             };
 
 
@@ -435,18 +438,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
             event.preventDefault();
 
-
             const email =
                 $("#loginEmail")
                 .value
                 .trim()
                 .toLowerCase();
 
-
             const password =
                 $("#loginPassword")
                 .value;
-
 
             const savedUser =
                 localStorage.getItem(
@@ -870,19 +870,63 @@ document.addEventListener("DOMContentLoaded", function () {
                     "content-item";
 
 
-                contentItem.innerHTML = `
+                /* =========================
+                   فيديوهات بها روابط
+                ========================== */
 
-                    <strong>
-                        ${icon}
-                        ${escapeHTML(item)}
-                    </strong>
+                if (
+                    type === "videos" &&
+                    typeof item === "object" &&
+                    item.url
+                ) {
 
-                    <small>
-                        ${description}
-                        — سيتم ربط المحتوى الحقيقي لاحقًا.
-                    </small>
+                    contentItem.innerHTML = `
 
-                `;
+                        <strong>
+                            ${icon}
+                            ${escapeHTML(item.title)}
+                        </strong>
+
+                        <small>
+                            ${description}
+                        </small>
+
+                        <a
+                            href="${escapeHTML(item.url)}"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="watch-video-button"
+                        >
+                            ▶️ مشاهدة الشرح
+                        </a>
+
+                    `;
+
+                } else {
+
+                    /* المحتوى الذي لم يتم ربطه برابط بعد */
+
+                    const itemName =
+                        typeof item === "object"
+                            ? item.title
+                            : item;
+
+
+                    contentItem.innerHTML = `
+
+                        <strong>
+                            ${icon}
+                            ${escapeHTML(itemName)}
+                        </strong>
+
+                        <small>
+                            ${description}
+                            — سيتم ربط المحتوى الحقيقي لاحقًا.
+                        </small>
+
+                    `;
+
+                }
 
 
                 contentList.appendChild(
@@ -967,127 +1011,4 @@ document.addEventListener("DOMContentLoaded", function () {
     ========================== */
 
     const savedTheme =
-        localStorage.getItem(
-            "mahmoudBacTheme"
-        );
-
-
-    if (savedTheme === "dark") {
-
-        document.body.classList.add(
-            "dark"
-        );
-
-        themeButton.textContent =
-            "☀️";
-
-    }
-
-
-    themeButton.addEventListener(
-        "click",
-        function () {
-
-            const dark =
-                document.body.classList.toggle(
-                    "dark"
-                );
-
-
-            if (dark) {
-
-                themeButton.textContent =
-                    "☀️";
-
-                localStorage.setItem(
-                    "mahmoudBacTheme",
-                    "dark"
-                );
-
-            } else {
-
-                themeButton.textContent =
-                    "🌙";
-
-                localStorage.setItem(
-                    "mahmoudBacTheme",
-                    "light"
-                );
-
-            }
-
-        }
-    );
-
-
-    /* =========================
-       استعادة الجلسة
-    ========================== */
-
-    const loggedIn =
-        localStorage.getItem(
-            "mahmoudBacLoggedIn"
-        );
-
-
-    const savedUser =
-        localStorage.getItem(
-            "mahmoudBacUser"
-        );
-
-
-    if (
-        loggedIn === "true" &&
-        savedUser
-    ) {
-
-        try {
-
-            const user =
-                JSON.parse(savedUser);
-
-
-            enterPlatform(
-                user,
-                "أخيرًا رجعت يا صديقي ❤️"
-            );
-
-        } catch (error) {
-
-            localStorage.removeItem(
-                "mahmoudBacLoggedIn"
-            );
-
-        }
-
-    } else {
-
-        /*
-         * مهم:
-         * لو الطالب مش مسجل دخول،
-         * يظل خارج المنصة.
-         */
-
-        showPage(
-            landingPage
-        );
-
-    }
-
-
-    /* =========================
-       حماية بسيطة من إدخال HTML
-    ========================== */
-
-    function escapeHTML(value) {
-
-        return String(value)
-            .replace(/&/g, "&amp;")
-            .replace(/</g, "&lt;")
-            .replace(/>/g, "&gt;")
-            .replace(/"/g, "&quot;")
-            .replace(/'/g, "&#039;");
-
-    }
-
-});
+        loca
